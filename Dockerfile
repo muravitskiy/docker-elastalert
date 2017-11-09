@@ -2,7 +2,7 @@ FROM python:2
 
 LABEL maintainer="Vitalii Muravitskiy, https://github.com/muravitskiy"
 
-ENV ELASTALERT_VERSION=0.1.20
+ENV ELASTALERT_VERSION=0.1.21
 ENV ELASTALERT_CONFIG_DIR=/etc/elastalert
 ENV ELASTALERT_RULES_DIR=/etc/elastalert/rules
 ENV ELASTALERT_CONFIG_FILE=config.yaml
