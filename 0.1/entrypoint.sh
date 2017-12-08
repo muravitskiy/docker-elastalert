@@ -4,16 +4,17 @@ set -e
 
 
 if [ "${1:0:1}" = '-' ]; then
-	set -- elastalert --verbose "$@"
+	set -- elastalert "$@"
+	exec "$@"
 fi
 
 if [ "$1" = 'elastalert' ]; then
 
+    set -- "$@" --config "${ELASTALERT_CONFIG}"
     echo "Creating elastalert index..."
 
     elastalert-create-index \
-        --index "${ELASTALERT_INDEX}" \
-        --old-index "${ELASTALERT_OLD_INDEX}"
+        --config "${ELASTALERT_CONFIG}"
 
     echo "Starting elastalert..."
 

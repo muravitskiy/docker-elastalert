@@ -2,9 +2,9 @@ FROM python:2
 
 LABEL maintainer="Vitalii Muravitskiy, https://github.com/muravitskiy"
 
-ENV ELASTALERT_VERSION=0.1.21
-ENV ELASTALERT_INDEX="elastalert_status"
-ENV ELASTALERT_OLD_INDEX=""
+ENV ELASTALERT_VERSION=0.1.24
+
+ENV ELASTALERT_CONFIG="config.yaml"
 
 RUN pip install elastalert==${ELASTALERT_VERSION}
 
