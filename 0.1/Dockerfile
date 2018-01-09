@@ -2,7 +2,7 @@ FROM python:2
 
 LABEL maintainer="Vitalii Muravitskiy, https://github.com/muravitskiy"
 
-ENV ELASTALERT_VERSION=0.1.25
+ENV ELASTALERT_VERSION=0.1.26
 
 ENV ELASTALERT_CONFIG="config.yaml"
 
